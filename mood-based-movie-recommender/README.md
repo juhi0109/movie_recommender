@@ -88,3 +88,110 @@ Real-time movie data is fetched using a movie API, and users can further persona
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
+```
+
+### 🔹 Step 2: (Optional) Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+Activate it:
+
+#### Windows
+```bash
+venv\Scripts\activate
+```
+#### macOS/ Linux
+```bash
+source venv/bin/activate
+```
+### 🔹 Step 3: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+If multiple Python versions are installed:
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 🔹 Step 4: Add Your API Key
+Create the following file:
+```bash
+.streamlit/secrets.toml
+```
+Add:
+```toml
+MOVIE_API_KEY = "YOUR_API_KEY_HERE"
+```
+### ⚠️ Never expose your API key publicly.
+---
+## 📦 requirements.txt
+Create a file named requirements.txt in the project root and add:
+```txt
+streamlit
+requests
+```
+(Optional - with version pinning)
+```txt
+streamlit>=1.30.0
+requests>=2.31.0
+```
+
+## ▶️ How to Install Requirements (Bash Commands)
+
+### 🔹 For Windows (PowerShell / CMD)
+```bash
+pip install -r requirements.txt
+```
+If you are using multiple Python versions:
+```bash
+python -m pip install -r requirements.txt
+```
+### 🔹 For macOS / Linux (Terminal)
+```bash
+pip3 install -r requirements.txt
+```
+Or:
+```bash
+python3 -m pip install -r requirements.txt
+```
+### 🔹 Using a Virtual Environment (Recommended)
+```bash
+# Create virtual environment
+python -m venv venv
+
+# Activate it
+# Windows
+venv\Scripts\activate
+
+# macOS / Linux
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+### 🔹 Step 5: Run the Application
+
+```bash
+streamlit run mood_movie_streamlit.py
+```
+The app will open automatically in your browser at:
+```arduino
+http://localhost:8501
+```
+---
+## 🛠️ Tech Stack Used
+- Full migration to TMDB API for better filtering and pagination
+- Add user favorites and history
+- Deploy publicly using Streamlit Cloud
+- Add AI-based personalized recommendations
+- Improve UI with card-based layout and animations
+---
+## 👤 Author
+### Juhi Agarwal
+
+### Python & ML Enthusiast
+
+### GitHub: https://github.com/juhi0109
